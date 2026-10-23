@@ -1,6 +1,6 @@
 # Space Connect — Orbital Mission Control Platform
 
-**Global Solution 2026 — FIAP | Turma 3ECR | Sprint 4 (Entrega Final)**
+**Sprint 2026 — FIAP | Turma 3ECR | Sprint 4 (Entrega Final)**
 
 App mobile (React Native + Expo) integrado à API REST (Spring Boot + H2) do grupo. Este README é o guia principal do projeto: com ele é possível clonar os dois repositórios, subir backend e frontend e reproduzir todo o fluxo mostrado no vídeo.
 
