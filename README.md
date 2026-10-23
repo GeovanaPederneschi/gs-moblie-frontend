@@ -10,6 +10,10 @@
 |---|---|
 | Geovana Carvalho Pederneschi | 559092 |
 | Thais Helena Ferreira Vieira | 552387 |
+| Gustavo Andrade | 559069 |
+| Mayene Doria | 558858 |
+| Lucas Santos | 556891 |
+| Gabriel Lacerda | 556391 |
 
 ---
 
