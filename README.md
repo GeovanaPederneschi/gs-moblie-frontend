@@ -18,6 +18,10 @@ App mobile (React Native + Expo) integrado à API REST (Spring Boot + H2) do gru
 |---|---|
 | Geovana Carvalho Pederneschi | RM559092 |
 | Thais Helena Ferreira Vieira | RM552387 |
+| Gustavo Andrade | RM559069 |
+| Mayene Doria | RM558858 |
+| Lucas Santos | RM556891 |
+| Gabriel Lacerda | RM556391 |
 
 ---
 
