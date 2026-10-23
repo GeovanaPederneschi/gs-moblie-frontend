@@ -8,7 +8,7 @@ App mobile (React Native + Expo) integrado à API REST (Spring Boot + H2) do gru
 
 ## 🎥 Vídeo de demonstração
 
-**YouTube (Não listado):** https://youtu.be/COLE_AQUI_O_LINK_DO_VIDEO
+**YouTube (Não listado):** https://youtu.be/FbL4_DYdXeM
 
 ---
 
