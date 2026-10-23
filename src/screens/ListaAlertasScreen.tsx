@@ -23,9 +23,11 @@ export default function ListaAlertasScreen({ navigation }: Props) {
   const [erro, setErro] = useState("");
   const { height } = useWindowDimensions();
 
+  // Recarrega sempre que a tela ganha foco (inclusive ao voltar de um cadastro)
   useEffect(() => {
-    carregarAlertas();
-  }, []);
+    const unsubscribe = navigation.addListener("focus", carregarAlertas);
+    return unsubscribe;
+  }, [navigation]);
 
   async function carregarAlertas() {
     setLoading(true);
@@ -38,6 +40,7 @@ export default function ListaAlertasScreen({ navigation }: Props) {
       });
       setAlertas(ordenados);
     } catch {
+      setAlertas([]);
       setErro("Erro ao carregar alertas. Verifique se a API está rodando.");
     } finally {
       setLoading(false);

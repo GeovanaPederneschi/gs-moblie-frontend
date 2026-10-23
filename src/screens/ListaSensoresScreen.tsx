@@ -26,9 +26,11 @@ export default function ListaSensoresScreen({ navigation }: Props) {
   const [erro, setErro] = useState("");
   const { height } = useWindowDimensions();
 
+  // Recarrega sempre que a tela ganha foco (inclusive ao voltar de um cadastro)
   useEffect(() => {
-    carregarDados();
-  }, []);
+    const unsubscribe = navigation.addListener("focus", carregarDados);
+    return unsubscribe;
+  }, [navigation]);
 
   async function carregarDados() {
     setLoading(true);
@@ -41,6 +43,8 @@ export default function ListaSensoresScreen({ navigation }: Props) {
       setSensores(listaSensores);
       setAlertasAtivos(listaAlertas.filter((a) => !a.resolvido).length);
     } catch {
+      setSensores([]);
+      setAlertasAtivos(0);
       setErro("Erro ao carregar dados. Verifique se a API está rodando.");
     } finally {
       setLoading(false);

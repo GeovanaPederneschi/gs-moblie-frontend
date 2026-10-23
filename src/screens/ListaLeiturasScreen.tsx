@@ -24,9 +24,11 @@ export default function ListaLeiturasScreen({ navigation }: Props) {
   const [erro, setErro] = useState("");
   const { height } = useWindowDimensions();
 
+  // Recarrega sempre que a tela ganha foco (inclusive ao voltar de um cadastro)
   useEffect(() => {
-    carregarLeituras();
-  }, []);
+    const unsubscribe = navigation.addListener("focus", carregarLeituras);
+    return unsubscribe;
+  }, [navigation]);
 
   async function carregarLeituras() {
     setLoading(true);
@@ -35,6 +37,7 @@ export default function ListaLeiturasScreen({ navigation }: Props) {
       const dados = await leituraService.listar();
       setLeituras(dados);
     } catch {
+      setLeituras([]);
       setErro("Erro ao carregar leituras. Verifique se a API está rodando.");
     } finally {
       setLoading(false);
